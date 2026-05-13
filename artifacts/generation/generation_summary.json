@@ -1,0 +1,30 @@
+{
+  "notebook": "10_generation_rag.ipynb",
+  "main_goal": "Generate final grounded answers from Corrective RAG outputs.",
+  "generation_method": "template_baseline",
+  "num_cases": 5,
+  "num_should_call_llm": 3,
+  "num_direct_response": 2,
+  "quality_pass": 5,
+  "quality_total": 5,
+  "routes": {
+    "cross_policy": 1,
+    "company_only": 1,
+    "legal_only": 1,
+    "out_of_scope": 1,
+    "need_clarification": 1
+  },
+  "decisions": {
+    "answer": 2,
+    "answer_with_legal_review_notice": 1,
+    "refuse": 1,
+    "ask_clarification": 1
+  },
+  "important_outputs": {
+    "template_generation_outputs": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\generation\\template_generation_outputs.json",
+    "template_generation_grounded_outputs": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\generation\\template_generation_grounded_outputs.json",
+    "generation_quality_report": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\generation\\generation_quality_report.csv",
+    "final_generation_outputs_json": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\generation\\final_generation_outputs.json",
+    "final_generation_outputs_csv": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\generation\\final_generation_outputs.csv"
+  }
+}

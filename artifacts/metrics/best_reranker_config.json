@@ -1,0 +1,16 @@
+{
+  "selected_by": "recall@5",
+  "best_method": "Reranker",
+  "best_value": 0.784195,
+  "reason": "Reranker được chọn vì đạt Recall@5 cao nhất trên validation set và cải thiện rõ ràng so với Weighted Hybrid.",
+  "pipeline": {
+    "candidate_retriever": "Weighted_Hybrid_RRF",
+    "reranker": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+    "candidate_top_k": 30,
+    "final_top_k": 5,
+    "bm25_top_k": 50,
+    "dense_top_k": 50,
+    "bm25_weight": 0.7,
+    "dense_weight": 1.3
+  }
+}

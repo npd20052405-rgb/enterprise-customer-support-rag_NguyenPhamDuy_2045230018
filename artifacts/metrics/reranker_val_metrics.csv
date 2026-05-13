@@ -1,0 +1,7 @@
+﻿metric,value,method
+recall@1,0.5396862289366647,Reranker
+recall@3,0.7286461359674608,Reranker
+recall@5,0.7841952353282975,Reranker
+recall@10,0.8349796629866357,Reranker
+mrr,0.644133025280614,Reranker
+ndcg@10,0.6762921143385993,Reranker

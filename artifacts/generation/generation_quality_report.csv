@@ -1,0 +1,6 @@
+﻿question,route,decision,should_call_llm,num_sources,num_evidence,overall_status,failed_checks,has_answer,has_sources,has_evidence,has_company_source,has_legal_source,has_legal_review_notice,mentions_85_percent,refuses_answer,asks_clarification
+Nếu công ty áp dụng chính sách quản lý thiết bị làm việc cho nhân viên Việt Nam thì cần lưu ý gì?,cross_policy,answer_with_legal_review_notice,True,6,3,PASS,[],True,True,True,True,True,True,,,
+What is the company policy for managing work devices?,company_only,answer,True,5,3,PASS,[],True,True,True,True,,,,,
+Lương thử việc được quy định như thế nào?,legal_only,answer,True,5,3,PASS,[],True,True,True,,True,,True,,
+Cách nấu phở bò ngon tại nhà như thế nào?,out_of_scope,refuse,False,0,0,PASS,[],True,True,True,,,,,True,
+Chính sách này áp dụng sao?,need_clarification,ask_clarification,False,0,0,PASS,[],True,True,True,,,,,,True

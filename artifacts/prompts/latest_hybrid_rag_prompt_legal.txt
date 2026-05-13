@@ -1,0 +1,100 @@
+Bạn là trợ lý RAG nội bộ doanh nghiệp.
+
+Nhiệm vụ:
+- Trả lời câu hỏi chỉ dựa trên CONTEXT được cung cấp.
+- Không tự bịa thông tin ngoài CONTEXT.
+- Nếu CONTEXT không đủ thông tin, hãy nói: "Tôi chưa tìm thấy đủ thông tin trong tài liệu được cung cấp. Vui lòng liên hệ HR/pháp chế để được xử lý chính xác hơn."
+- Câu trả lời phải dễ hiểu, ngắn gọn và có trích nguồn.
+- Ưu tiên nguồn có liên quan trực tiếp nhất đến câu hỏi.
+- Nếu câu hỏi bằng tiếng Việt, trả lời bằng tiếng Việt.
+- Nếu câu hỏi bằng tiếng Anh, trả lời bằng tiếng Anh.
+
+QUESTION:
+Lương thử việc được quy định như thế nào?
+
+CONTEXT:
+[Source 1]
+source_type: legal
+title: legal_cid_172654
+parent_id: 172654
+chunk_id: legal_172654_000
+rrf_score: 0.029079
+bm25_rank: 5.0
+dense_rank: 11.0
+
+Về các chế độ bảo hiểm đối với người thử việc giao kết hợp đồng thử việc 
+Câu hỏi: Trong thời gian làm việc theo hợp đồng thử việc, NSDLĐ có phải trả thêm cùng lúc với kỳ trả lương một khoản tiền cho NLĐ tương đương với mức đóng bảo hiểm xã hội bắt buộc, bảo hiểm y tế, bảo hiểm thất nghiệp cho NLĐ theo quy định tại khoản 3 Điều 168 BLLĐ không? 
+Hướng trả lời, hướng dẫn: 
+NSDLĐ có nghĩa vụ trả, vì: 
+- Căn cứ quy định tại khoản 1, khoản 1 Điều 3 và khoản 1, khoản 2 Điều 24, Điều 26 BLLĐ thì người thử việc là người lao động (hợp đồng thử việc vẫn chứa đầy đủ các yếu tố của quan hệ lao động, người thử việc vẫn được hưởng ( tiền lương). 
+- Việc áp dụng quy định của khoản 3 Điều 168 BLLĐ đối với người thử việc nhằm bảo đảm sự công bằng, bình đẳng giữa 2 nhóm đối tượng là người thử việc giao kết hợp đồng thử việc riêng và người thử việc có nội dung thử việc được ghi trong hợp đồng lao động. Người thử việc có nội dung thử việc ghi trong HĐLĐ được tham gia bảo hiểm xã hội bắt buộc', bảo hiểm y tế”, bảo hiểm thất nghiệp. Do đó, người thử việc giao kết hợp đồng thử việc riêng cần được NSDLĐ chi trả thêm cùng lúc với kỳ trả lương một khoản tiền tương đương với mức NSDLĐ đóng bảo hiểm xã hội
+
+---
+
+[Source 2]
+source_type: legal
+title: legal_cid_75051
+parent_id: 75051
+chunk_id: legal_75051_001
+rrf_score: 0.026587
+bm25_rank: 3.0
+dense_rank: 24.0
+
+định;
+- Thời gian bị đình chỉ công tác, bị tạm giữ, tạm giam và các loại thời gian không làm việc khác ngoài quy định tại Điểm b Khoản 1 Điều này;
+- Thời gian tập sự (bao gồm cả trường hợp được hưởng 100% mức lương của ngạch công chức, chức danh nghề nghiệp viên chức tập sự)4.
+- Thời gian cán bộ, công chức, viên chức và người lao động đào ngũ trong quá trình thực hiện nghĩa vụ quân sự tại ngũ5.
+- Thời gian thử thách đối với cán bộ, công chức, viên chức và người lao động bị phạt tù nhưng cho hưởng án treo; trường hợp thời gian thử thách ít hơn thời gian bị kéo dài nâng bậc lương thường xuyên thì tính theo thời gian bị kéo dài nâng bậc lương thường xuyên.
+- Thời gian nghỉ công tác chờ đủ tuổi nghỉ hưu theo quy định hiện hành của pháp luật7.
+Tổng các loại thời gian không được tính để xét nâng bậc lương thường xuyên quy định tại Điểm này (nếu có) được tính tròn tháng, nếu có thời gian lẻ không tròn tháng thì được tính như sau: Dưới 11 ngày làm việc (không bao gồm các ngày nghỉ hằng tuần và ngày nghỉ làm việc được hưởng nguyên lương theo quy định của pháp luật về lao động) thì không tính; từ 11 ngày làm việc trở lên tính bằng 01 tháng.
+…
+
+---
+
+[Source 3]
+source_type: legal
+title: legal_cid_84991
+parent_id: 84991
+chunk_id: legal_84991_001
+rrf_score: 0.024105
+bm25_rank: 40.0
+dense_rank: 16.0
+
+hành một số điều của Bộ luật Lao động về tiền lương.
+4. Cán bộ, công chức, viên chức trong biên chế trả lương của cơ quan, đơn vị và các đối tượng hưởng lương thuộc lực lượng vũ trang được cử đi công tác, làm việc, học tập ở nước ngoài từ 30 ngày liên tục trở lên hưởng sinh hoạt phí do Nhà nước đài thọ hoặc hưởng lương, hưởng sinh hoạt phí do nước ngoài, tổ chức quốc tế đài thọ thì trong thời gian ở nước ngoài được hưởng 40% mức lương hiện hưởng cộng phụ cấp chức vụ lãnh đạo và phụ cấp thâm niên vượt khung (nếu có).
+5. Công chức dự bị và những người trong thời gian tập sự hoặc thử việc trong các cơ quan nhà nước (kể cả tập sự công chức cấp xã) và trong các đơn vị sự nghiệp của Nhà nước được hưởng mức lương theo quy định tại Điều 18 Nghị định số 115/2003/NĐ-CP, Điều 21 Nghị định số 116/2003/NĐ-CP, Điều 18 Nghị định số 117/2003/NĐ-CP, Điều 4 Nghị định số 121/2003/NĐ-CP và được hưởng chế độ phụ cấp, chế độ trả lương theo quy định tại Nghị định này.
+
+---
+
+[Source 4]
+source_type: legal
+title: legal_cid_116782
+parent_id: 116782
+chunk_id: legal_116782_000
+rrf_score: 0.021311
+bm25_rank: nan
+dense_rank: 1.0
+
+Vi phạm quy định về thử việc
+1. Phạt tiền từ 500.000 đồng đến 1.000.000 đồng đối với người sử dụng lao động có một trong các hành vi sau đây:
+a) Yêu cầu thử việc đối với người lao động làm việc theo hợp đồng lao động có thời hạn dưới 01 tháng;
+...
+
+---
+
+[Source 5]
+source_type: legal
+title: legal_cid_61953
+parent_id: 61953
+chunk_id: legal_61953_000
+rrf_score: 0.020968
+bm25_rank: nan
+dense_rank: 2.0
+
+“Điều 26. Tiền lương trong thời gian thử việc
+ Tiền lương của người lao động trong thời gian thử việc do hai bên thoả thuận nhưng ít nhất phải bằng 85% mức lương của công việc đó.”
+
+YÊU CẦU OUTPUT:
+1. Câu trả lời
+2. Nguồn đã dùng
+3. Evidence ngắn gọn

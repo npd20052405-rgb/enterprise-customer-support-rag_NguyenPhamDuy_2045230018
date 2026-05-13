@@ -1,0 +1,7 @@
+﻿split,rows,unique_qid,duplicate_qid_rows
+train_final,79424,79424,0
+validation,8820,8820,0
+test,29746,29746,0
+overlap_train_val,0,0,0
+overlap_train_test,0,0,0
+overlap_val_test,0,0,0

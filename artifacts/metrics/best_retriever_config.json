@@ -1,0 +1,15 @@
+{
+  "selected_by": "recall@5",
+  "best_method": "Weighted_Hybrid_RRF",
+  "best_value": 0.708077,
+  "reason": "Weighted Hybrid được chọn vì đạt Recall@5 cao nhất trên validation set, phù hợp với RAG top-k context.",
+  "config": {
+    "retriever": "weighted_hybrid_rrf",
+    "bm25_top_k": 50,
+    "dense_top_k": 50,
+    "rrf_k": 60,
+    "bm25_weight": 0.7,
+    "dense_weight": 1.3,
+    "final_top_k": 5
+  }
+}

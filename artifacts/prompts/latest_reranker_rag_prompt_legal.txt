@@ -1,0 +1,107 @@
+Bạn là trợ lý RAG nội bộ doanh nghiệp.
+
+Nhiệm vụ:
+- Trả lời câu hỏi chỉ dựa trên CONTEXT được cung cấp.
+- Không tự bịa thông tin ngoài CONTEXT.
+- Nếu CONTEXT không đủ thông tin, hãy nói: "Tôi chưa tìm thấy đủ thông tin trong tài liệu được cung cấp. Vui lòng liên hệ HR/pháp chế để được xử lý chính xác hơn."
+- Câu trả lời phải dễ hiểu, ngắn gọn và có trích nguồn.
+- Ưu tiên nguồn có rerank_score cao và liên quan trực tiếp nhất đến câu hỏi.
+- Nếu câu hỏi bằng tiếng Việt, trả lời bằng tiếng Việt.
+- Nếu câu hỏi bằng tiếng Anh, trả lời bằng tiếng Anh.
+
+QUESTION:
+Lương thử việc được quy định như thế nào?
+
+CONTEXT:
+[Source 1]
+source_type: legal
+title: legal_cid_116782
+parent_id: 116782
+chunk_id: legal_116782_000
+rerank_score: 1.562081
+rrf_score: 0.021311
+bm25_rank: nan
+dense_rank: 1.0
+
+Vi phạm quy định về thử việc
+1. Phạt tiền từ 500.000 đồng đến 1.000.000 đồng đối với người sử dụng lao động có một trong các hành vi sau đây:
+a) Yêu cầu thử việc đối với người lao động làm việc theo hợp đồng lao động có thời hạn dưới 01 tháng;
+...
+
+---
+
+[Source 2]
+source_type: legal
+title: legal_cid_61953
+parent_id: 61953
+chunk_id: legal_61953_000
+rerank_score: -0.086482
+rrf_score: 0.020968
+bm25_rank: nan
+dense_rank: 2.0
+
+“Điều 26. Tiền lương trong thời gian thử việc
+ Tiền lương của người lao động trong thời gian thử việc do hai bên thoả thuận nhưng ít nhất phải bằng 85% mức lương của công việc đó.”
+
+---
+
+[Source 3]
+source_type: legal
+title: legal_cid_107047
+parent_id: 107047
+chunk_id: legal_107047_001
+rerank_score: -1.060560
+rrf_score: 0.018841
+bm25_rank: nan
+dense_rank: 9.0
+
+thử nghiệm theo từng đề thi: 1.000.000 đồng/báo cáo/môn thi.
+e) Tiền công thuê chuyên gia định cỡ câu trắc nghiệm (Chủ trì; các thành viên): Áp dụng cách thức tính toán tiền công theo ngày cho từng cá nhân nhưng không phân biệt trình độ đào tạo và thâm niên công tác theo mức lương quy định tại Điều 3, Điều 4 Thông tư số 02/2015/TT-BLĐTBXH."
+
+---
+
+[Source 4]
+source_type: legal
+title: legal_cid_175106
+parent_id: 175106
+chunk_id: legal_175106_000
+rerank_score: -1.423649
+rrf_score: 0.020313
+bm25_rank: nan
+dense_rank: 4.0
+
+Thử việc và thời gian thử việc
+1. Thử việc
+a) Đơn vị sử dụng lao động và người lao động có thể thỏa thuận nội dung thử việc ghi trong hợp đồng lao động hoặc thỏa thuận về thử việc bằng việc giao kết hợp đồng thử việc;
+b) Không áp dụng thử việc đối với người lao động giao kết hợp đồng lao động có thời hạn dưới 01 tháng.
+2. Thời gian thử việc
+Thời gian thử việc do hai bên thỏa thuận căn cứ vào tính chất và mức độ phức tạp của công việc nhưng chỉ được thử việc 01 lần đối với một công việc và bảo đảm các điều kiện sau đây:
+a) Không quá 60 ngày đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên;
+b) Không quá 30 ngày đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật trung cấp nghề, trung cấp chuyên nghiệp và tương đương;
+c) Không quá 06 ngày làm việc đối với công việc khác.
+3. Tiền lương của người lao động trong thời gian thử việc do hai bên thỏa thuận nhưng ít nhất phải bằng 85% mức lương của công việc đó.
+
+---
+
+[Source 5]
+source_type: legal
+title: legal_cid_77700
+parent_id: 77700
+chunk_id: legal_77700_000
+rerank_score: -1.604817
+rrf_score: 0.014607
+bm25_rank: nan
+dense_rank: 29.0
+
+"Điều 17. Vi phạm quy định về tiền lương
+1. Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng đối với người sử dụng lao động có một trong các hành vi sau đây:
+a) Không công bố công khai tại nơi làm việc trước khi thực hiện: thang lương, bảng lương; mức lao động; quy chế thưởng;
+b) Không xây dựng thang lương, bảng lương hoặc định mức lao động; không áp dụng thử mức lao động trước khi ban hành chính thức;
+c) Không tham khảo ý kiến của tổ chức đại diện người lao động tại cơ sở đối với nơi có tổ chức đại diện người lao động tại cơ sở khi xây dựng thang lương, bảng lương; định mức lao động; quy chế thưởng;
+d) Không thông báo bảng kê trả lương hoặc có thông báo bảng kê trả lương cho người lao động nhưng không đúng theo quy định;
+đ) Không trả lương bình đẳng hoặc phân biệt giới tính đối với người lao động làm công việc có giá trị như nhau."
+
+YÊU CẦU OUTPUT:
+1. Câu trả lời
+2. Nguồn đã dùng
+3. Evidence ngắn gọn

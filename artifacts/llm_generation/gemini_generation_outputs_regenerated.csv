@@ -1,0 +1,17 @@
+﻿question,route,decision,should_call_llm,provider_used,model,ok,error,answer_chars,answer_preview
+Nếu công ty áp dụng chính sách quản lý thiết bị làm việc cho nhân viên Việt Nam thì cần lưu ý gì?,cross_policy,answer_with_legal_review_notice,True,gemini_api_regenerated,gemini-2.5-flash,True,,125,"Khi công ty áp dụng chính sách quản lý thiết bị làm việc cho nhân viên Việt Nam, cần lưu ý các điểm sau:
+
+**1. Chính sách nội"
+What is the company policy for managing work devices?,company_only,answer,True,gemini_api_regenerated,gemini-2.5-flash,True,,172,"Here is the company policy for managing work devices:
+
+1.  **Short answer**
+    The company centrally manages and secures work devices, specifically Macs and Linux machines"
+Lương thử việc được quy định như thế nào?,legal_only,answer,True,gemini_api,gemini-2.5-flash,True,,823,"Dựa trên các quy định pháp luật hiện hành, tiền lương thử việc được quy định như sau:
+
+1.  **Mức lương thỏa thuận**: Tiền lương của người lao động trong thời gian thử việc do người lao động và người sử dụng lao động thỏa thuận.
+2.  **Mức tối thiểu**: Mức lương này phải ít nhất bằng 85% mức lương của công việc đó.
+
+**Nguồn đã dùng:**
+*   legal_cid_6"
+Cách nấu phở bò ngon tại nhà như thế nào?,out_of_scope,refuse,False,direct_response,corrective_rule,True,,150,Tôi chưa tìm thấy đủ thông tin phù hợp trong phạm vi tài liệu doanh nghiệp/pháp luật của hệ thống. Vì vậy tôi không nên trả lời để tránh suy đoán sai.
+Chính sách này áp dụng sao?,need_clarification,ask_clarification,False,direct_response,corrective_rule,True,,190,"Bạn vui lòng nói rõ hơn chính sách hoặc vấn đề cụ thể cần hỏi. Ví dụ: chính sách thiết bị làm việc, lương thử việc, bảo hiểm, hợp đồng lao động, hoặc quy định áp dụng cho nhân viên Việt Nam."

@@ -1,0 +1,95 @@
+Bạn là trợ lý RAG nội bộ doanh nghiệp.
+
+Nhiệm vụ:
+- Trả lời câu hỏi chỉ dựa trên phần CONTEXT được cung cấp.
+- Không tự bịa thông tin ngoài CONTEXT.
+- Nếu CONTEXT không đủ thông tin, hãy nói: "Tôi chưa tìm thấy đủ thông tin trong tài liệu được cung cấp. Vui lòng liên hệ HR/pháp chế để được xử lý chính xác hơn."
+- Câu trả lời phải dễ hiểu, ngắn gọn và có trích nguồn.
+- Nếu câu hỏi bằng tiếng Việt, trả lời bằng tiếng Việt.
+- Nếu câu hỏi bằng tiếng Anh, trả lời bằng tiếng Anh.
+
+QUESTION:
+Lương thử việc được quy định như thế nào?
+
+CONTEXT:
+[Source 1]
+source_type: legal
+title: legal_cid_116782
+parent_id: 116782
+chunk_id: legal_116782_000
+score: 0.8770
+
+Vi phạm quy định về thử việc
+1. Phạt tiền từ 500.000 đồng đến 1.000.000 đồng đối với người sử dụng lao động có một trong các hành vi sau đây:
+a) Yêu cầu thử việc đối với người lao động làm việc theo hợp đồng lao động có thời hạn dưới 01 tháng;
+...
+
+---
+
+[Source 2]
+source_type: legal
+title: legal_cid_61953
+parent_id: 61953
+chunk_id: legal_61953_000
+score: 0.8748
+
+“Điều 26. Tiền lương trong thời gian thử việc
+ Tiền lương của người lao động trong thời gian thử việc do hai bên thoả thuận nhưng ít nhất phải bằng 85% mức lương của công việc đó.”
+
+---
+
+[Source 3]
+source_type: legal
+title: legal_cid_172654
+parent_id: 172654
+chunk_id: legal_172654_001
+score: 0.8739
+
+bắt buộc, bảo hiểm y tế, bảo hiểm thất nghiệp. 
+- Theo quy định của Luật Bảo hiểm xã hội thì người thử việc theo hợp đồng thử việc không thuộc đối tượng tham gia bảo hiểm xã hội bắt buộc"; khoản 3 Điều 168 BLLĐ áp dụng cho người lao động không thuộc đối tượng tham gia bảo hiểm xã hội bắt buộc. Do đó, người lao động là người thử việc thuộc đối tượng áp dụng của khoản 3 Điều 168 BLLĐ được bảo đảm quyền lợi này. 
+- Khoản 3 Điều 8 Nghị định số 145/2020/NĐ-CP quy định thời gian thử việc được tính là thời gian NLĐ đã làm việc thực tế cho NSDLĐ để tính trợ cấp thôi việc, nếu trong thời gian này NLĐ chưa được chi trả một khoản tiền tương đương với mức NSDLĐ đóng bảo hiểm thất nghiệp.
+
+---
+
+[Source 4]
+source_type: legal
+title: legal_cid_175106
+parent_id: 175106
+chunk_id: legal_175106_000
+score: 0.8717
+
+Thử việc và thời gian thử việc
+1. Thử việc
+a) Đơn vị sử dụng lao động và người lao động có thể thỏa thuận nội dung thử việc ghi trong hợp đồng lao động hoặc thỏa thuận về thử việc bằng việc giao kết hợp đồng thử việc;
+b) Không áp dụng thử việc đối với người lao động giao kết hợp đồng lao động có thời hạn dưới 01 tháng.
+2. Thời gian thử việc
+Thời gian thử việc do hai bên thỏa thuận căn cứ vào tính chất và mức độ phức tạp của công việc nhưng chỉ được thử việc 01 lần đối với một công việc và bảo đảm các điều kiện sau đây:
+a) Không quá 60 ngày đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên;
+b) Không quá 30 ngày đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật trung cấp nghề, trung cấp chuyên nghiệp và tương đương;
+c) Không quá 06 ngày làm việc đối với công việc khác.
+3. Tiền lương của người lao động trong thời gian thử việc do hai bên thỏa thuận nhưng ít nhất phải bằng 85% mức lương của công việc đó.
+
+---
+
+[Source 5]
+source_type: legal
+title: legal_cid_36069
+parent_id: 36069
+chunk_id: legal_36069_000
+score: 0.8675
+
+Mức phạt tiền, thẩm quyền xử phạt và nguyên tắc áp dụng đối với hành vi vi phạm hành chính nhiều lần
+1. Mức phạt tiền quy định đối với các hành vi vi phạm quy định tại Chương II, Chương III và Chương IV Nghị định này là mức phạt đối với cá nhân, trừ trường hợp quy định tại khoản 1, 2, 3, 5 Điều 7; khoản 3, 4, 6 Điều 13; khoản 2 Điều 25; khoản 1 Điều 26; khoản 1, 5, 6, 7 Điều 27; khoản 8 Điều 39; khoản 5 Điều 41; khoản 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 Điều 42; khoản 1, 2, 3, 4, 5, 6, 7, 8 Điều 43; khoản 1, 2, 3, 4, 5, 6 Điều 45; khoản 3 Điều 46 Nghị định này. Mức phạt tiền đối với tổ chức bằng 02 lần mức phạt tiền đối với cá nhân.
+Vi phạm quy định về thử việc
+1. Phạt tiền từ 500.000 đồng đến 1.000.000 đồng đối với người sử dụng lao động có một trong các hành vi sau đây:
+a) Yêu cầu thử việc đối với người lao động làm việc theo hợp đồng lao động có thời hạn dưới 01 tháng;
+b) Không thông báo kết quả thử việc cho người lao động theo quy định.
+2. Phạt tiền từ 2.000.000 đồng đến 5.000.000 đồng đối với người sử dụng lao động có một trong các hành vi sau đây:
+a) Yêu cầu người lao động thử việc quá 01 lần đối với một công việc;
+b) Thử việc quá thời gian quy định;
+c) Trả lương cho người
+
+YÊU CẦU OUTPUT:
+1. Câu trả lời
+2. Nguồn đã dùng
+3. Evidence ngắn gọn

@@ -1,0 +1,131 @@
+Bạn là trợ lý RAG nội bộ doanh nghiệp.
+
+Nhiệm vụ:
+- Trả lời câu hỏi chỉ dựa trên CONTEXT được cung cấp.
+- Không tự bịa thông tin ngoài CONTEXT.
+- Nếu CONTEXT không đủ thông tin, hãy nói: "Tôi chưa tìm thấy đủ thông tin trong tài liệu được cung cấp. Vui lòng liên hệ HR/pháp chế để được xử lý chính xác hơn."
+- Câu trả lời phải dễ hiểu, ngắn gọn và có trích nguồn.
+- Ưu tiên nguồn có rerank_score cao và liên quan trực tiếp nhất đến câu hỏi.
+- Nếu câu hỏi bằng tiếng Việt, trả lời bằng tiếng Việt.
+- Nếu câu hỏi bằng tiếng Anh, trả lời bằng tiếng Anh.
+
+QUESTION:
+Nếu công ty áp dụng chính sách quản lý thiết bị làm việc cho nhân viên Việt Nam thì cần lưu ý gì?
+
+CONTEXT:
+[Source 1]
+source_type: company_handbook
+title: Managing Work Devices
+parent_id: company_0004
+chunk_id: company_0004_001
+rerank_score: nan
+rrf_score: 0.791058
+bm25_rank: nan
+dense_rank: 1.0
+
+With Linux, we run Omarchy, which already comes with the standard configuration needed (full-disk encryption, firewall, etc). Here we lean on 1password to provide the employee onboarding/offboarding of access to credentials and our Tailscale VPN to control access to internal systems. We don't use a managed process like Kandji.
+
+## Access to code and secrets
+Knowing our devices are safe and secure allows us to entrust our work computers with access to sensitive systems like Queenbee, and our internal VPN and remote servers. This means installing the VPN, checking out 37signals code, and storing secrets must only be done on a work device, not a personal device.
+
+Please do not keep any personal data on your 37signals-issued computer. You should maintain a separate, personally-owned machine if you need a home computer. The company reserves the right to, and may be required to, seize your computer or its data at any point in response to subpoenas, lawsuits, or security incidents.
+
+---
+
+[Source 2]
+source_type: company_handbook
+title: Managing Work Devices
+parent_id: company_0004
+chunk_id: company_0004_002
+rerank_score: nan
+rrf_score: 0.773632
+bm25_rank: nan
+dense_rank: 2.0
+
+## Mobile devices and Windows
+Devices running Android, iOS/iPadOS, and Windows are currently unmanaged. It’s fine to install our BC4 and HEY apps on these devices to access work projects and email, but since they’re unmanaged – and therefore ‘untrusted’ – it’s not okay to store 37signals code or secrets on them. If you're coding or accessing secure systems, you should be doing so on a Kandji-managed Mac or an Omarchy Linux machine.
+
+## FAQ
+There are many questions that arise from IT policies such as this, so we've written an FAQ in BC4 to help answer them.
+
+---
+
+[Source 3]
+source_type: company_handbook
+title: Managing Work Devices
+parent_id: company_0004
+chunk_id: company_0004_000
+rerank_score: nan
+rrf_score: 0.772039
+bm25_rank: nan
+dense_rank: 3.0
+
+# Managing work devices
+Everyone receives a new Mac when they join 37signals. We centrally manage and secure these devices with Kandji which reduces our exposure to security incidents. Kandji applies a standard configuration to every device (e.g. enable disk encryption, firewall, password rules), it installs essential apps (e.g. EncryptMe), and it will ensure the apps have the latest security updates applied. Kandji also allows us to remotely wipe devices should they be lost, or when an employee leaves the company.
+
+We mainly use macOS and Linux at 37signals to develop and support our applications.
+
+With macOS, we centrally manage and secure these devices with Kandji. Kandji applies a standard configuration to every device (e.g. enable disk encryption, firewall, password rules), it installs essential apps, and it will ensure the apps have the latest security updates applied. Kandji also allows us to remotely wipe devices should they be lost, or when an employee leaves the company. (This doesn’t mean you are being monitored or tracked! Kandji is a configuration management system, not a panopticon.)
+
+---
+
+[Source 4]
+source_type: legal
+title: legal_cid_211231
+parent_id: 211231
+chunk_id: legal_211231_000
+rerank_score: 0.174754
+rrf_score: 0.020000
+bm25_rank: nan
+dense_rank: 5.0
+
+Quản lý, sử dụng trang thiết bị
+1. Trang thiết bị phải được sử dụng đúng tiêu chuẩn, định mức và đúng mục đích.
+2. Không tự ý đổi, trao đổi, cho, tặng, biếu trang thiết bị làm việc của cơ quan; điều chuyển trang thiết bị làm việc giữa các đơn vị, cá nhân khi chưa được phép của cấp có thẩm quyền.
+3. Khi mang trang thiết bị làm việc thuộc sở hữu cá nhân ( bàn, ghế, tủ…) vào cơ quan phải đăng ký và có giấy xác nhận tài sản thuộc sở hữu cá nhân với Văn phòng Bộ (Phòng Quản trị). Giấy xác nhận tài sản thuộc sở hữu cá nhân phải được cá nhân lưu giữ và xuất trình với Văn phòng Bộ (Phòng Quản trị) khi mang các trang thiết bị sở hữu cá nhân ra ngoài cơ quan.
+4. Mang trang thiết bị ra ngoài cơ quan phải báo cáo Lãnh đạo đơn vị bằng văn bản và có xác nhận của Văn phòng Bộ (Phòng Quản trị).
+5. Quản lý, sử dụng trang thiết bị làm việc tại các đơn vị
+a) Trang thiết bị làm việc tại các đơn vị bao gồm trang thiết bị làm việc được giao cho từng thành viên của đơn vị sử dụng (bàn làm việc, máy tính…) và trang thiết bị làm việc sử dụng chung trong đơn vị (máy photocopy, máy điện thoại dùng chung, máy fax…).
+b) Thủ trưởng đơn vị có trách nhiệm: Bố trí, điều chuyển trang thiết bị làm việc trong nội bộ
+
+---
+
+[Source 5]
+source_type: legal
+title: legal_cid_24406
+parent_id: 24406
+chunk_id: legal_24406_000
+rerank_score: -0.132488
+rrf_score: 0.021149
+bm25_rank: 47.0
+dense_rank: 29.0
+
+1. Thiết bị sinh hoạt trang bị cho chức danh làm việc tại cơ quan Việt Nam ở nước ngoài và các thành viên có tiêu chuẩn đi theo là các thiết bị gắn liền với nhà ở, nhà riêng Đại sứ; gồm: Bộ bàn ghế ngồi làm việc, bộ bàn ghế tiếp khách, bộ bàn ghế ăn, tủ tài liệu, ti vi, điện thoại cố định, tủ quần áo, giường, đệm, tủ lạnh, máy giặt, lò vi sóng, bếp và các thiết bị khác (nếu cần).
+2. Thiết bị sinh hoạt gắn liền với nhà ở của cán bộ, công chức, viên chức tại cơ quan Việt Nam ở nước ngoài thực hiện theo quy định tại Phụ lục II ban hành kèm theo Nghị định này.
+3. Bộ trưởng, Thủ trưởng cơ quan trung ương, Chủ tịch Ủy ban nhân dân cấp tỉnh quyết định mức giá trần thiết bị sinh hoạt áp dụng cho từng địa bàn trên cơ sở:
+a) Thiết bị sinh hoạt có tiêu chuẩn kỹ thuật đáp ứng yêu cầu sinh hoạt, được sử dụng phổ biến tại nước sở tại, không mua sắm thiết bị sinh hoạt có tiêu chuẩn kỹ thuật cao, gây lãng phí;
+b) Giá của ít nhất 03 nhà cung cấp trên thị trường đã được niêm yết, thông báo rộng rãi tại nước sở tại hoặc từ thông tin chính thống do các nhà cung cấp công bố theo pháp luật của nước sở tại được khai thác qua mạng Internet đối với thiết bị sinh hoạt theo tiêu chuẩn kỹ thuật quy định tại
+
+---
+
+[Source 6]
+source_type: legal
+title: legal_cid_152390
+parent_id: 152390
+chunk_id: legal_152390_000
+rerank_score: -0.507774
+rrf_score: 0.020635
+bm25_rank: nan
+dense_rank: 3.0
+
+Quản lý, sử dụng trang thiết bị
+1. Trang thiết bị phải được sử dụng đúng tiêu chuẩn, định mức và đúng mục đích.
+2. Không tự ý đổi, trao đổi, cho, tặng, biếu trang thiết bị làm việc của cơ quan; điều chuyển trang thiết bị làm việc giữa các đơn vị, cá nhân khi chưa được phép của cấp có thẩm quyền.
+3. Khi mang trang thiết bị làm việc thuộc sở hữu cá nhân ( bàn, ghế, tủ…) vào cơ quan phải đăng ký và có giấy xác nhận tài sản thuộc sở hữu cá nhân với Văn phòng Bộ (Phòng Quản trị). Giấy xác nhận tài sản thuộc sở hữu cá nhân phải được cá nhân lưu giữ và xuất trình với Văn phòng Bộ (Phòng Quản trị) khi mang các trang thiết bị sở hữu cá nhân ra ngoài cơ quan.
+4. Mang trang thiết bị ra ngoài cơ quan phải báo cáo Lãnh đạo đơn vị bằng văn bản và có xác nhận của Văn phòng Bộ (Phòng Quản trị).
+…
+
+YÊU CẦU OUTPUT:
+1. Câu trả lời
+2. Nguồn đã dùng
+3. Evidence ngắn gọn

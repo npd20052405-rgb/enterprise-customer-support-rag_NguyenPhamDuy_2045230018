@@ -1,0 +1,55 @@
+﻿# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets / API keys
+.env
+*.env
+.env.*
+secrets/
+*.key
+.streamlit/secrets.toml
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+
+# Large generated data / indexes
+data/raw/
+data/indexes/
+data/faiss/
+data/embeddings/
+*.faiss
+*.index
+*.pkl
+*.joblib
+
+# Model cache / checkpoints
+.cache/
+models/
+checkpoints/
+
+# Local indexes / vector stores
+indexes/
+
+
+# Large corpus files
+data/processed/
+data/chunks/*.csv
+!data/chunks/chunk_summary.csv
+

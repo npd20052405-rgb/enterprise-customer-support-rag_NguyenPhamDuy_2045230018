@@ -1,0 +1,4 @@
+﻿split,rows,unique_qid,unique_questions,unique_relevant_cids,cid_coverage
+train_strict,78812,78812,77864,51431,1.0
+val_strict,8605,8605,8508,8109,1.0
+test,29746,29746,29573,23907,1.0

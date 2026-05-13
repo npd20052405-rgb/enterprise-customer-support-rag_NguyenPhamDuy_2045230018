@@ -1,0 +1,24 @@
+{
+  "notebook": "08_reranker_rag.ipynb",
+  "main_goal": "Build and evaluate Reranker RAG using Weighted Hybrid candidates plus Cross-Encoder reranking.",
+  "best_method": "Reranker",
+  "selection_metric": "recall@5",
+  "best_recall_at_5": 0.784195,
+  "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+  "candidate_retriever": "Weighted_Hybrid_RRF",
+  "main_results": {
+    "BM25_recall@5": 0.605113,
+    "Dense_E5_recall@5": 0.700407,
+    "Weighted_Hybrid_RRF_recall@5": 0.708077,
+    "Reranker_recall@5": 0.784195,
+    "Reranker_recall@1": 0.539686,
+    "Reranker_recall@10": 0.83498,
+    "Reranker_mrr": 0.644133
+  },
+  "cross_policy_strategy_final": {
+    "company_handbook": "Dense Retrieval because handbook is English and user query can be Vietnamese.",
+    "legal": "Weighted Hybrid Retrieval followed by Reranker.",
+    "final_prompt": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\prompts\\latest_reranker_cross_policy_prompt_final.txt",
+    "final_preview": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\prompts\\reranker_cross_policy_preview_final.json"
+  }
+}

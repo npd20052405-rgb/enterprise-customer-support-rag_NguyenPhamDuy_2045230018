@@ -1,0 +1,5 @@
+﻿case,count,meaning
+BM25_wrong_Dense_right,1256,Dense tìm được tài liệu đúng nhưng BM25 không tìm được trong top 10
+BM25_right_Dense_wrong,428,BM25 tìm được tài liệu đúng nhưng Dense không tìm được trong top 10
+Both_right,5487,Cả BM25 và Dense đều tìm được tài liệu đúng trong top 10
+Both_wrong,1434,Cả BM25 và Dense đều không tìm được tài liệu đúng trong top 10

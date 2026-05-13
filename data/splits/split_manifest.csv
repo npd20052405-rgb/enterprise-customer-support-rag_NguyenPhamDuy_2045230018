@@ -1,0 +1,4 @@
+﻿split,file,rows,purpose
+train_strict,data/splits/train_strict.csv,78812,"Dùng cho huấn luyện/tạo index phụ/tuning nếu cần, đã loại exact và near-duplicate với test"
+val_strict,data/splits/val_strict.csv,8605,"Dùng để chọn top_k, chunk_size, threshold, reranker, không dùng test"
+test_final,data/splits/test_final.csv,29746,Chỉ dùng đánh giá cuối cùng

@@ -1,0 +1,7 @@
+﻿metric,value,method
+recall@1,0.4223126089482859,Weighted_Hybrid_RRF
+recall@3,0.6251016850668216,Weighted_Hybrid_RRF
+recall@5,0.7080766995932597,Weighted_Hybrid_RRF
+recall@10,0.7851249273678094,Weighted_Hybrid_RRF
+mrr,0.5418626121763833,Weighted_Hybrid_RRF
+ndcg@10,0.5867266167966434,Weighted_Hybrid_RRF

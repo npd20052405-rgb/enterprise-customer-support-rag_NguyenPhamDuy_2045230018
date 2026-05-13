@@ -1,0 +1,92 @@
+{
+  "question": "Nếu công ty áp dụng chính sách quản lý thiết bị làm việc cho nhân viên Việt Nam thì cần lưu ý gì?",
+  "answer": "Theo handbook nội bộ, công ty có chính sách quản lý thiết bị làm việc, bao gồm việc cấu hình bảo mật, quản lý thiết bị được cấp, kiểm soát truy cập hệ thống nội bộ, và hạn chế lưu mã nguồn hoặc secrets trên thiết bị cá nhân. Khi áp dụng cho nhân viên Việt Nam, công ty nên đối chiếu thêm với quy định nội bộ tại Việt Nam và các tài liệu pháp luật liên quan đến quản lý trang thiết bị, an toàn nơi làm việc, bàn giao/cập nhật thiết bị và trách nhiệm sử dụng tài sản. Vì các nguồn pháp luật truy xuất được chưa đủ để kết luận toàn diện, HR/pháp chế nên kiểm tra thêm hợp đồng lao động, biên bản bàn giao thiết bị và quy chế tài sản trước khi áp dụng chính sách.",
+  "sources": [
+    {
+      "rank": 1,
+      "source_type": "company_handbook",
+      "title": "Managing Work Devices",
+      "parent_id": "company_0004",
+      "chunk_id": "company_0004_001",
+      "score": 0.7911
+    },
+    {
+      "rank": 2,
+      "source_type": "company_handbook",
+      "title": "Managing Work Devices",
+      "parent_id": "company_0004",
+      "chunk_id": "company_0004_002",
+      "score": 0.7736
+    },
+    {
+      "rank": 3,
+      "source_type": "company_handbook",
+      "title": "Managing Work Devices",
+      "parent_id": "company_0004",
+      "chunk_id": "company_0004_000",
+      "score": 0.772
+    },
+    {
+      "rank": 4,
+      "source_type": "legal",
+      "title": "legal_cid_56198",
+      "parent_id": "56198",
+      "chunk_id": "legal_56198_001",
+      "score": 0.8528
+    },
+    {
+      "rank": 5,
+      "source_type": "legal",
+      "title": "legal_cid_117969",
+      "parent_id": "117969",
+      "chunk_id": "legal_117969_000",
+      "score": 0.8513
+    },
+    {
+      "rank": 6,
+      "source_type": "legal",
+      "title": "legal_cid_152390",
+      "parent_id": "152390",
+      "chunk_id": "legal_152390_000",
+      "score": 0.8505
+    }
+  ],
+  "evidence": [
+    {
+      "rank": 1,
+      "source_type": "company_handbook",
+      "title": "Managing Work Devices",
+      "evidence": "With Linux, we run Omarchy, which already comes with the standard configuration needed (full-disk encryption, firewall, etc). Here we lean on 1password to provide the employee onboarding/offboarding of access to credentials and our Tailscale VPN to control access to internal systems. We don't use a managed process like Kandji.\n\n## Access to code and secrets\nKnowing our devices are safe and secure allows us to entrust our work computers with acces"
+    },
+    {
+      "rank": 2,
+      "source_type": "company_handbook",
+      "title": "Managing Work Devices",
+      "evidence": "## Mobile devices and Windows\nDevices running Android, iOS/iPadOS, and Windows are currently unmanaged. It’s fine to install our BC4 and HEY apps on these devices to access work projects and email, but since they’re unmanaged – and therefore ‘untrusted’ – it’s not okay to store 37signals code or secrets on them. If you're coding or accessing secure systems, you should be doing so on a Kandji-managed Mac or an Omarchy Linux machine.\n\n## FAQ\nThere "
+    },
+    {
+      "rank": 3,
+      "source_type": "company_handbook",
+      "title": "Managing Work Devices",
+      "evidence": "# Managing work devices\nEveryone receives a new Mac when they join 37signals. We centrally manage and secure these devices with Kandji which reduces our exposure to security incidents. Kandji applies a standard configuration to every device (e.g. enable disk encryption, firewall, password rules), it installs essential apps (e.g. EncryptMe), and it will ensure the apps have the latest security updates applied. Kandji also allows us to remotely wip"
+    },
+    {
+      "rank": 4,
+      "source_type": "legal",
+      "title": "legal_cid_56198",
+      "evidence": "việc, người sử dụng lao động phải:\na) Thông báo công khai cho người lao động tại nơi quan trắc môi trường lao động và nơi được kiểm tra, đánh giá, quản lý yếu tố nguy hiểm;\nb) Cung cấp thông tin khi tổ chức công đoàn, cơ quan, tổ chức có thẩm quyền yêu cầu;\nc) Có biện pháp khắc phục, kiểm soát các yếu tố nguy hiểm, yếu tố có hại tại nơi làm việc nhằm bảo đảm an toàn, vệ sinh lao động, chăm sóc sức khỏe cho người lao động.\n5. Chính phủ quy định ch"
+    },
+    {
+      "rank": 5,
+      "source_type": "legal",
+      "title": "legal_cid_117969",
+      "evidence": "Cập nhật thông tin thiết bị CNTT mới\nTrong thời hạn 03 ngày làm việc kể từ tiếp nhận thiết bị và ký biên bản bàn giao nghiệm thu đưa vào sử dụng, các đơn vị thực hiện cập nhật dữ liệu và đính kèm các tài liệu liên quan (tập tin biên bản nghiệm thu, hợp đồng, bản quyền kèm theo định dạng pdf) vào phần mềm Quản lý thiết bị.\nViệc cập nhật thông tin thiết bị CNTT cho người sử dụng phải bảo đảm đúng quy định về tiêu chuẩn, định mức sử dụng máy móc, th"
+    },
+    {
+      "rank": 6,
+      "source_type": "legal",
+      "title": "legal_cid_152390",
+      "evidence": "Quản lý, sử dụng trang thiết bị\n1. Trang thiết bị phải được sử dụng đúng tiêu chuẩn, định mức và đúng mục đích.\n2. Không tự ý đổi, trao đổi, cho, tặng, biếu trang thiết bị làm việc của cơ quan; điều chuyển trang thiết bị làm việc giữa các đơn vị, cá nhân khi chưa được phép của cấp có thẩm quyền.\n3. Khi mang trang thiết bị làm việc thuộc sở hữu cá nhân ( bàn, ghế, tủ…) vào cơ quan phải đăng ký và có giấy xác nhận tài sản thuộc sở hữu cá nhân với V"
+    }
+  ]
+}

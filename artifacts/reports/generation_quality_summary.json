@@ -1,0 +1,7 @@
+{
+  "num_cases": 5,
+  "num_pass": 5,
+  "num_fail": 0,
+  "num_should_call_llm": 3,
+  "num_direct_response": 2
+}

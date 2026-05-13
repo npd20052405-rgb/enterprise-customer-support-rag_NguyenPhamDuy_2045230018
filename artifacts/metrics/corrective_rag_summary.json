@@ -1,0 +1,79 @@
+{
+  "notebook": "09_corrective_rag.ipynb",
+  "main_goal": "Build Corrective RAG decision layer on top of Reranker RAG.",
+  "best_retrieval_pipeline": {
+    "company_handbook": "Dense Retrieval",
+    "legal": "Weighted Hybrid Retrieval + Reranker",
+    "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+    "embedding_model": "intfloat/multilingual-e5-base"
+  },
+  "supported_routes": {
+    "cross_policy": "Questions requiring both internal handbook and Vietnamese legal context.",
+    "company_only": "Questions answered using company handbook only.",
+    "legal_only": "Questions answered using legal corpus only.",
+    "out_of_scope": "Questions outside enterprise/legal scope; should be refused.",
+    "need_clarification": "Vague questions; system should ask user to clarify."
+  },
+  "decisions": {
+    "answer": "Context is strong enough to answer.",
+    "answer_with_caution": "Context exists but is not strong enough for confident conclusion.",
+    "answer_with_legal_review_notice": "Answer is allowed but must warn HR/legal review is needed.",
+    "ask_clarification": "Question is too vague and needs clarification.",
+    "refuse": "Question is out of scope or context is insufficient."
+  },
+  "demo_cases": [
+    {
+      "question": "Nếu công ty áp dụng chính sách quản lý thiết bị làm việc cho nhân viên Việt Nam thì cần lưu ý gì?",
+      "route": "cross_policy",
+      "decision": "answer_with_legal_review_notice",
+      "should_call_llm": true,
+      "num_sources": 6,
+      "source_distribution": {
+        "company_handbook": 3,
+        "legal": 3
+      }
+    },
+    {
+      "question": "What is the company policy for managing work devices?",
+      "route": "company_only",
+      "decision": "answer",
+      "should_call_llm": true,
+      "num_sources": 5,
+      "source_distribution": {
+        "company_handbook": 5
+      }
+    },
+    {
+      "question": "Lương thử việc được quy định như thế nào?",
+      "route": "legal_only",
+      "decision": "answer",
+      "should_call_llm": true,
+      "num_sources": 5,
+      "source_distribution": {
+        "legal": 5
+      }
+    },
+    {
+      "question": "Cách nấu phở bò ngon tại nhà như thế nào?",
+      "route": "out_of_scope",
+      "decision": "refuse",
+      "should_call_llm": false,
+      "num_sources": 0,
+      "source_distribution": {}
+    },
+    {
+      "question": "Chính sách này áp dụng sao?",
+      "route": "need_clarification",
+      "decision": "ask_clarification",
+      "should_call_llm": false,
+      "num_sources": 0,
+      "source_distribution": {}
+    }
+  ],
+  "important_outputs": {
+    "corrective_demo_outputs": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\prompts\\corrective_rag_demo_outputs.json",
+    "corrective_pipeline_final_demo": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\prompts\\corrective_rag_pipeline_final_demo.json",
+    "corrective_answer_preview_final": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\prompts\\corrective_rag_answer_preview_final.json",
+    "latest_corrective_cross_policy_prompt_final": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\prompts\\latest_corrective_cross_policy_prompt_final.txt"
+  }
+}

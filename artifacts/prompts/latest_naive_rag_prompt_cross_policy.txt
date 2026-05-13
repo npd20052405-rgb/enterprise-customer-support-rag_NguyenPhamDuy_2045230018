@@ -1,0 +1,60 @@
+Bạn là trợ lý RAG nội bộ doanh nghiệp.
+
+Nhiệm vụ:
+- Trả lời câu hỏi chỉ dựa trên phần CONTEXT được cung cấp.
+- Không tự bịa thông tin ngoài CONTEXT.
+- Nếu CONTEXT không đủ thông tin, hãy nói: "Tôi chưa tìm thấy đủ thông tin trong tài liệu được cung cấp. Vui lòng liên hệ HR/pháp chế để được xử lý chính xác hơn."
+- Câu trả lời phải dễ hiểu, ngắn gọn và có trích nguồn.
+- Nếu câu hỏi bằng tiếng Việt, trả lời bằng tiếng Việt.
+- Nếu câu hỏi bằng tiếng Anh, trả lời bằng tiếng Anh.
+
+QUESTION:
+Nếu công ty áp dụng chính sách quản lý thiết bị làm việc cho nhân viên Việt Nam thì cần lưu ý gì?
+
+CONTEXT:
+[Source 1]
+source_type: legal
+title: legal_cid_56198
+parent_id: 56198
+chunk_id: legal_56198_001
+score: 0.8528
+
+việc, người sử dụng lao động phải:
+a) Thông báo công khai cho người lao động tại nơi quan trắc môi trường lao động và nơi được kiểm tra, đánh giá, quản lý yếu tố nguy hiểm;
+b) Cung cấp thông tin khi tổ chức công đoàn, cơ quan, tổ chức có thẩm quyền yêu cầu;
+c) Có biện pháp khắc phục, kiểm soát các yếu tố nguy hiểm, yếu tố có hại tại nơi làm việc nhằm bảo đảm an toàn, vệ sinh lao động, chăm sóc sức khỏe cho người lao động.
+5. Chính phủ quy định chi tiết về việc kiểm soát yếu tố nguy hiểm, yếu tố có hại tại nơi làm việc và điều kiện hoạt động của tổ chức quan trắc môi trường lao động bảo đảm phù hợp với Luật đầu tư, Luật doanh nghiệp."
+
+---
+
+[Source 2]
+source_type: legal
+title: legal_cid_117969
+parent_id: 117969
+chunk_id: legal_117969_000
+score: 0.8513
+
+Cập nhật thông tin thiết bị CNTT mới
+Trong thời hạn 03 ngày làm việc kể từ tiếp nhận thiết bị và ký biên bản bàn giao nghiệm thu đưa vào sử dụng, các đơn vị thực hiện cập nhật dữ liệu và đính kèm các tài liệu liên quan (tập tin biên bản nghiệm thu, hợp đồng, bản quyền kèm theo định dạng pdf) vào phần mềm Quản lý thiết bị.
+Việc cập nhật thông tin thiết bị CNTT cho người sử dụng phải bảo đảm đúng quy định về tiêu chuẩn, định mức sử dụng máy móc, thiết bị CNTT trong ngành BHXH. Thông tin về người sử dụng được đồng bộ từ phần mềm Quản lý nhân sự (khi có quyết định của cấp có thẩm quyền về tuyển dụng, điều động, luân chuyển, nghỉ hưu, thôi việc cần kịp thời thực hiện thao tác cập nhật trạng thái trên phần mềm Quản lý nhân sự để bảo đảm việc cập nhật đúng tiêu chuẩn, định mức người dùng cho phần mềm Quản lý thiết bị).
+
+---
+
+[Source 3]
+source_type: legal
+title: legal_cid_152390
+parent_id: 152390
+chunk_id: legal_152390_000
+score: 0.8505
+
+Quản lý, sử dụng trang thiết bị
+1. Trang thiết bị phải được sử dụng đúng tiêu chuẩn, định mức và đúng mục đích.
+2. Không tự ý đổi, trao đổi, cho, tặng, biếu trang thiết bị làm việc của cơ quan; điều chuyển trang thiết bị làm việc giữa các đơn vị, cá nhân khi chưa được phép của cấp có thẩm quyền.
+3. Khi mang trang thiết bị làm việc thuộc sở hữu cá nhân ( bàn, ghế, tủ…) vào cơ quan phải đăng ký và có giấy xác nhận tài sản thuộc sở hữu cá nhân với Văn phòng Bộ (Phòng Quản trị). Giấy xác nhận tài sản thuộc sở hữu cá nhân phải được cá nhân lưu giữ và xuất trình với Văn phòng Bộ (Phòng Quản trị) khi mang các trang thiết bị sở hữu cá nhân ra ngoài cơ quan.
+4. Mang trang thiết bị ra ngoài cơ quan phải báo cáo Lãnh đạo đơn vị bằng văn bản và có xác nhận của Văn phòng Bộ (Phòng Quản trị).
+…
+
+YÊU CẦU OUTPUT:
+1. Câu trả lời
+2. Nguồn đã dùng
+3. Evidence ngắn gọn

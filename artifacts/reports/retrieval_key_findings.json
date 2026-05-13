@@ -1,0 +1,9 @@
+{
+  "best_method_overall": "Reranker",
+  "selected_metric": "recall@5",
+  "reranker_recall@5": 0.784195,
+  "weighted_hybrid_recall@5": 0.708077,
+  "dense_recall@5": 0.700407,
+  "bm25_recall@5": 0.605113,
+  "main_conclusion": "Reranker đạt kết quả tốt nhất trên toàn bộ metric retrieval, đặc biệt cải thiện Recall@5 so với Weighted Hybrid."
+}

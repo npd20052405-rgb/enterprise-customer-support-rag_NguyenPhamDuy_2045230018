@@ -1,0 +1,7 @@
+﻿check,value
+qid_overlap_train_val,0
+qid_overlap_train_test,0
+qid_overlap_val_test,0
+exact_question_overlap_train_val,0
+exact_question_overlap_train_test,0
+exact_question_overlap_val_test,0

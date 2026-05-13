@@ -1,0 +1,15 @@
+pandas
+numpy
+datasets
+scikit-learn
+torch
+transformers
+sentence-transformers
+faiss-cpu
+rank-bm25
+evaluate
+rouge-score
+bert-score
+streamlit
+tqdm
+matplotlib

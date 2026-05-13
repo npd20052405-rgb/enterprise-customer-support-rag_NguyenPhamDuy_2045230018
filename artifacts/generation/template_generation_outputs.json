@@ -1,0 +1,319 @@
+[
+  {
+    "question": "Nếu công ty áp dụng chính sách quản lý thiết bị làm việc cho nhân viên Việt Nam thì cần lưu ý gì?",
+    "route": "cross_policy",
+    "decision": "answer_with_legal_review_notice",
+    "should_call_llm": true,
+    "generation_method": "template_baseline",
+    "answer": "Theo tài liệu nội bộ, công ty có chính sách quản lý thiết bị làm việc, bao gồm cấu hình bảo mật thiết bị, kiểm soát truy cập vào hệ thống nội bộ, không lưu code hoặc secrets trên thiết bị cá nhân, và có thể remote wipe thiết bị khi bị mất hoặc khi nhân viên rời công ty. Khi áp dụng cho nhân viên Việt Nam, công ty nên đối chiếu thêm với các quy định/quy chế về bàn giao thiết bị, quản lý tài sản, sử dụng thiết bị đúng mục đích, bảo mật dữ liệu và trách nhiệm của người lao động khi sử dụng tài sản công ty. Do câu hỏi có yếu tố pháp lý, HR/pháp chế cần kiểm tra lại hợp đồng lao động, biên bản bàn giao thiết bị, quy chế tài sản nội bộ và quy định lao động hiện hành trước khi áp dụng chính thức.",
+    "sources_used": [
+      {
+        "rank": 1,
+        "source_type": "company_handbook",
+        "title": "Managing Work Devices",
+        "parent_id": "company_0004",
+        "chunk_id": "company_0004_001",
+        "selection_method": "dense",
+        "selection_score": 0.7910580635070801
+      },
+      {
+        "rank": 2,
+        "source_type": "company_handbook",
+        "title": "Managing Work Devices",
+        "parent_id": "company_0004",
+        "chunk_id": "company_0004_002",
+        "selection_method": "dense",
+        "selection_score": 0.7736321091651917
+      },
+      {
+        "rank": 3,
+        "source_type": "company_handbook",
+        "title": "Managing Work Devices",
+        "parent_id": "company_0004",
+        "chunk_id": "company_0004_000",
+        "selection_method": "dense",
+        "selection_score": 0.7720390558242798
+      },
+      {
+        "rank": 4,
+        "source_type": "legal",
+        "title": "legal_cid_211231",
+        "parent_id": "211231",
+        "chunk_id": "legal_211231_000",
+        "selection_method": "reranker",
+        "selection_score": 0.17475397884845734
+      },
+      {
+        "rank": 5,
+        "source_type": "legal",
+        "title": "legal_cid_24406",
+        "parent_id": "24406",
+        "chunk_id": "legal_24406_000",
+        "selection_method": "reranker",
+        "selection_score": -0.13248755037784576
+      },
+      {
+        "rank": 6,
+        "source_type": "legal",
+        "title": "legal_cid_152390",
+        "parent_id": "152390",
+        "chunk_id": "legal_152390_000",
+        "selection_method": "reranker",
+        "selection_score": -0.5077742338180542
+      }
+    ],
+    "evidence_used": [
+      {
+        "rank": 1,
+        "source_type": "company_handbook",
+        "title": "Managing Work Devices",
+        "selection_method": "dense",
+        "evidence": "With Linux, we run Omarchy, which already comes with the standard configuration needed (full-disk encryption, firewall, etc). Here we lean on 1password to provide the employee onboarding/offboarding of access to credentials and our Tailscale VPN to control access to internal systems. We don't use a managed process like Kandji.\n\n## Access to code and secrets\nKnowing our devices are safe and secure allows us to entrust"
+      },
+      {
+        "rank": 2,
+        "source_type": "company_handbook",
+        "title": "Managing Work Devices",
+        "selection_method": "dense",
+        "evidence": "## Mobile devices and Windows\nDevices running Android, iOS/iPadOS, and Windows are currently unmanaged. It’s fine to install our BC4 and HEY apps on these devices to access work projects and email, but since they’re unmanaged – and therefore ‘untrusted’ – it’s not okay to store 37signals code or secrets on them. If you're coding or accessing secure systems, you should be doing so on a Kandji-managed Mac or an Omarchy"
+      },
+      {
+        "rank": 3,
+        "source_type": "company_handbook",
+        "title": "Managing Work Devices",
+        "selection_method": "dense",
+        "evidence": "# Managing work devices\nEveryone receives a new Mac when they join 37signals. We centrally manage and secure these devices with Kandji which reduces our exposure to security incidents. Kandji applies a standard configuration to every device (e.g. enable disk encryption, firewall, password rules), it installs essential apps (e.g. EncryptMe), and it will ensure the apps have the latest security updates applied. Kandji "
+      },
+      {
+        "rank": 4,
+        "source_type": "legal",
+        "title": "legal_cid_211231",
+        "selection_method": "reranker",
+        "evidence": "Quản lý, sử dụng trang thiết bị\n1. Trang thiết bị phải được sử dụng đúng tiêu chuẩn, định mức và đúng mục đích.\n2. Không tự ý đổi, trao đổi, cho, tặng, biếu trang thiết bị làm việc của cơ quan; điều chuyển trang thiết bị làm việc giữa các đơn vị, cá nhân khi chưa được phép của cấp có thẩm quyền.\n3. Khi mang trang thiết bị làm việc thuộc sở hữu cá nhân ( bàn, ghế, tủ…) vào cơ quan phải đăng ký và có giấy xác nhận tài "
+      },
+      {
+        "rank": 5,
+        "source_type": "legal",
+        "title": "legal_cid_24406",
+        "selection_method": "reranker",
+        "evidence": "1. Thiết bị sinh hoạt trang bị cho chức danh làm việc tại cơ quan Việt Nam ở nước ngoài và các thành viên có tiêu chuẩn đi theo là các thiết bị gắn liền với nhà ở, nhà riêng Đại sứ; gồm: Bộ bàn ghế ngồi làm việc, bộ bàn ghế tiếp khách, bộ bàn ghế ăn, tủ tài liệu, ti vi, điện thoại cố định, tủ quần áo, giường, đệm, tủ lạnh, máy giặt, lò vi sóng, bếp và các thiết bị khác (nếu cần).\n2. Thiết bị sinh hoạt gắn liền với nh"
+      },
+      {
+        "rank": 6,
+        "source_type": "legal",
+        "title": "legal_cid_152390",
+        "selection_method": "reranker",
+        "evidence": "Quản lý, sử dụng trang thiết bị\n1. Trang thiết bị phải được sử dụng đúng tiêu chuẩn, định mức và đúng mục đích.\n2. Không tự ý đổi, trao đổi, cho, tặng, biếu trang thiết bị làm việc của cơ quan; điều chuyển trang thiết bị làm việc giữa các đơn vị, cá nhân khi chưa được phép của cấp có thẩm quyền.\n3. Khi mang trang thiết bị làm việc thuộc sở hữu cá nhân ( bàn, ghế, tủ…) vào cơ quan phải đăng ký và có giấy xác nhận tài "
+      }
+    ],
+    "prompt": "Bạn là trợ lý RAG nội bộ doanh nghiệp.\n\nROUTE:\ncross_policy\n\nDECISION:\nanswer_with_legal_review_notice\n\nLÝ DO DECISION:\nCó cả nguồn nội bộ và nguồn pháp luật liên quan, nhưng vẫn cần cảnh báo HR/pháp chế kiểm tra trước khi áp dụng chính thức.\n\nNHIỆM VỤ:\nTrả lời đối chiếu giữa nguồn nội bộ và nguồn pháp luật. Bắt buộc nhắc HR/pháp chế kiểm tra trước khi áp dụng chính thức.\n\nQUY TẮC BẮT BUỘC:\n- Chỉ dùng thông tin trong CONTEXT.\n- Không bịa thêm điều khoản, luật, chính sách hoặc con số không có trong CONTEXT.\n- Nếu nguồn pháp luật chưa đủ chắc, phải nói rõ cần HR/pháp chế kiểm tra thêm.\n- Câu trả lời phải dễ hiểu, có cấu trúc và có nguồn.\n- Nếu câu hỏi bằng tiếng Việt, trả lời bằng tiếng Việt.\n- Nếu câu hỏi bằng tiếng Anh, trả lời bằng tiếng Anh.\n\nQUESTION:\nNếu công ty áp dụng chính sách quản lý thiết bị làm việc cho nhân viên Việt Nam thì cần lưu ý gì?\n\nCONTEXT:\n[Source 1]\nsource_type: company_handbook\ntitle: Managing Work Devices\nparent_id: company_0004\nchunk_id: company_0004_001\nselection_method: dense\nselection_score: 0.791058\nbm25_rank: nan\ndense_rank: 1.0\nrerank_score: None\n\nWith Linux, we run Omarchy, which already comes with the standard configuration needed (full-disk encryption, firewall, etc). Here we lean on 1password to provide the employee onboarding/offboarding of access to credentials and our Tailscale VPN to control access to internal systems. We don't use a managed process like Kandji.\n\n## Access to code and secrets\nKnowing our devices are safe and secure allows us to entrust our work computers with access to sensitive systems like Queenbee, and our internal VPN and remote servers. This means installing the VPN, checking out 37signals code, and storing secrets must only be done on a work device, not a personal device.\n\nPlease do not keep any personal data on your 37signals-issued computer. You should maintain a separate, personally-owned machine if you need a home computer. The company reserves the right to, and may be required to, seize your computer or its data at any point in response to subpoenas, lawsuits, or security incidents.\n\n---\n\n[Source 2]\nsource_type: company_handbook\ntitle: Managing Work Devices\nparent_id: company_0004\nchunk_id: company_0004_002\nselection_method: dense\nselection_score: 0.773632\nbm25_rank: nan\ndense_rank: 2.0\nrerank_score: None\n\n## Mobile devices and Windows\nDevices running Android, iOS/iPadOS, and Windows are currently unmanaged. It’s fine to install our BC4 and HEY apps on these devices to access work projects and email, but since they’re unmanaged – and therefore ‘untrusted’ – it’s not okay to store 37signals code or secrets on them. If you're coding or accessing secure systems, you should be doing so on a Kandji-managed Mac or an Omarchy Linux machine.\n\n## FAQ\nThere are many questions that arise from IT policies such as this, so we've written an FAQ in BC4 to help answer them.\n\n---\n\n[Source 3]\nsource_type: company_handbook\ntitle: Managing Work Devices\nparent_id: company_0004\nchunk_id: company_0004_000\nselection_method: dense\nselection_score: 0.772039\nbm25_rank: nan\ndense_rank: 3.0\nrerank_score: None\n\n# Managing work devices\nEveryone receives a new Mac when they join 37signals. We centrally manage and secure these devices with Kandji which reduces our exposure to security incidents. Kandji applies a standard configuration to every device (e.g. enable disk encryption, firewall, password rules), it installs essential apps (e.g. EncryptMe), and it will ensure the apps have the latest security updates applied. Kandji also allows us to remotely wipe devices should they be lost, or when an employee leaves the company.\n\nWe mainly use macOS and Linux at 37signals to develop and support our applications.\n\nWith macOS, we centrally manage and secure these devices with Kandji. Kandji applies a standard configuration to every device (e.g. enable disk encryption, firewall, password rules), it installs essential apps, and it will ensure the apps have the latest security updates applied. Kandji also allows us to remotely wipe devices should they be lost, or when an employee leaves the company. (This doesn’t mean you are being monitored or tracked! Kandji is a configuration management system, not a panopticon.)\n\n---\n\n[Source 4]\nsource_type: legal\ntitle: legal_cid_211231\nparent_id: 211231\nchunk_id: legal_211231_000\nselection_method: reranker\nselection_score: 0.174754\nbm25_rank: nan\ndense_rank: 5.0\nrerank_score: 0.174754\n\nQuản lý, sử dụng trang thiết bị\n1. Trang thiết bị phải được sử dụng đúng tiêu chuẩn, định mức và đúng mục đích.\n2. Không tự ý đổi, trao đổi, cho, tặng, biếu trang thiết bị làm việc của cơ quan; điều chuyển trang thiết bị làm việc giữa các đơn vị, cá nhân khi chưa được phép của cấp có thẩm quyền.\n3. Khi mang trang thiết bị làm việc thuộc sở hữu cá nhân ( bàn, ghế, tủ…) vào cơ quan phải đăng ký và có giấy xác nhận tài sản thuộc sở hữu cá nhân với Văn phòng Bộ (Phòng Quản trị). Giấy xác nhận tài sản thuộc sở hữu cá nhân phải được cá nhân lưu giữ và xuất trình với Văn phòng Bộ (Phòng Quản trị) khi mang các trang thiết bị sở hữu cá nhân ra ngoài cơ quan.\n4. Mang trang thiết bị ra ngoài cơ quan phải báo cáo Lãnh đạo đơn vị bằng văn bản và có xác nhận của Văn phòng Bộ (Phòng Quản trị).\n5. Quản lý, sử dụng trang thiết bị làm việc tại các đơn vị\na) Trang thiết bị làm việc tại các đơn vị bao gồm trang thiết bị làm việc được giao cho từng thành viên của đơn vị sử dụng (bàn làm việc, máy tính…) và trang thiết bị làm việc sử dụng chung trong đơn vị (máy photocopy, máy điện thoại dùng chung, máy fax…).\nb) Thủ trưởng đơn vị có trách nhiệm: Bố trí, điều chuyển trang thiết bị làm việc trong nội bộ\n\n---\n\n[Source 5]\nsource_type: legal\ntitle: legal_cid_24406\nparent_id: 24406\nchunk_id: legal_24406_000\nselection_method: reranker\nselection_score: -0.132488\nbm25_rank: 47.0\ndense_rank: 29.0\nrerank_score: -0.132488\n\n1. Thiết bị sinh hoạt trang bị cho chức danh làm việc tại cơ quan Việt Nam ở nước ngoài và các thành viên có tiêu chuẩn đi theo là các thiết bị gắn liền với nhà ở, nhà riêng Đại sứ; gồm: Bộ bàn ghế ngồi làm việc, bộ bàn ghế tiếp khách, bộ bàn ghế ăn, tủ tài liệu, ti vi, điện thoại cố định, tủ quần áo, giường, đệm, tủ lạnh, máy giặt, lò vi sóng, bếp và các thiết bị khác (nếu cần).\n2. Thiết bị sinh hoạt gắn liền với nhà ở của cán bộ, công chức, viên chức tại cơ quan Việt Nam ở nước ngoài thực hiện theo quy định tại Phụ lục II ban hành kèm theo Nghị định này.\n3. Bộ trưởng, Thủ trưởng cơ quan trung ương, Chủ tịch Ủy ban nhân dân cấp tỉnh quyết định mức giá trần thiết bị sinh hoạt áp dụng cho từng địa bàn trên cơ sở:\na) Thiết bị sinh hoạt có tiêu chuẩn kỹ thuật đáp ứng yêu cầu sinh hoạt, được sử dụng phổ biến tại nước sở tại, không mua sắm thiết bị sinh hoạt có tiêu chuẩn kỹ thuật cao, gây lãng phí;\nb) Giá của ít nhất 03 nhà cung cấp trên thị trường đã được niêm yết, thông báo rộng rãi tại nước sở tại hoặc từ thông tin chính thống do các nhà cung cấp công bố theo pháp luật của nước sở tại được khai thác qua mạng Internet đối với thiết bị sinh hoạt theo tiêu chuẩn kỹ thuật quy định tại\n\n---\n\n[Source 6]\nsource_type: legal\ntitle: legal_cid_152390\nparent_id: 152390\nchunk_id: legal_152390_000\nselection_method: reranker\nselection_score: -0.507774\nbm25_rank: nan\ndense_rank: 3.0\nrerank_score: -0.507774\n\nQuản lý, sử dụng trang thiết bị\n1. Trang thiết bị phải được sử dụng đúng tiêu chuẩn, định mức và đúng mục đích.\n2. Không tự ý đổi, trao đổi, cho, tặng, biếu trang thiết bị làm việc của cơ quan; điều chuyển trang thiết bị làm việc giữa các đơn vị, cá nhân khi chưa được phép của cấp có thẩm quyền.\n3. Khi mang trang thiết bị làm việc thuộc sở hữu cá nhân ( bàn, ghế, tủ…) vào cơ quan phải đăng ký và có giấy xác nhận tài sản thuộc sở hữu cá nhân với Văn phòng Bộ (Phòng Quản trị). Giấy xác nhận tài sản thuộc sở hữu cá nhân phải được cá nhân lưu giữ và xuất trình với Văn phòng Bộ (Phòng Quản trị) khi mang các trang thiết bị sở hữu cá nhân ra ngoài cơ quan.\n4. Mang trang thiết bị ra ngoài cơ quan phải báo cáo Lãnh đạo đơn vị bằng văn bản và có xác nhận của Văn phòng Bộ (Phòng Quản trị).\n…\n\nYÊU CẦU OUTPUT:\n1. Câu trả lời\n2. Nguồn đã dùng\n3. Evidence ngắn gọn\n4. Mức độ tin cậy / lưu ý"
+  },
+  {
+    "question": "What is the company policy for managing work devices?",
+    "route": "company_only",
+    "decision": "answer",
+    "should_call_llm": true,
+    "generation_method": "template_baseline",
+    "answer": "Theo handbook nội bộ, công ty quản lý thiết bị làm việc bằng cách cấu hình và bảo mật thiết bị, bao gồm các thiết lập như mã hóa ổ đĩa, firewall, quy tắc mật khẩu và cập nhật bảo mật. Nhân viên nên dùng thiết bị làm việc đáng tin cậy để truy cập VPN, hệ thống nội bộ, code và secrets. Không nên lưu code, secrets hoặc dữ liệu cá nhân trên thiết bị không phù hợp. Công ty cũng có thể remote wipe thiết bị khi bị mất hoặc khi nhân viên rời công ty.",
+    "sources_used": [
+      {
+        "rank": 1,
+        "source_type": "company_handbook",
+        "title": "Managing Work Devices",
+        "parent_id": "company_0004",
+        "chunk_id": "company_0004_001",
+        "selection_method": "dense",
+        "selection_score": 0.8258280754089355
+      },
+      {
+        "rank": 2,
+        "source_type": "company_handbook",
+        "title": "Managing Work Devices",
+        "parent_id": "company_0004",
+        "chunk_id": "company_0004_000",
+        "selection_method": "dense",
+        "selection_score": 0.8253887891769409
+      },
+      {
+        "rank": 3,
+        "source_type": "company_handbook",
+        "title": "Managing Work Devices",
+        "parent_id": "company_0004",
+        "chunk_id": "company_0004_002",
+        "selection_method": "dense",
+        "selection_score": 0.8196018934249878
+      },
+      {
+        "rank": 4,
+        "source_type": "company_handbook",
+        "title": "Moonlighting",
+        "parent_id": "company_0005",
+        "chunk_id": "company_0005_002",
+        "selection_method": "dense",
+        "selection_score": 0.7884213924407959
+      },
+      {
+        "rank": 5,
+        "source_type": "company_handbook",
+        "title": "Readme",
+        "parent_id": "company_0008",
+        "chunk_id": "company_0008_000",
+        "selection_method": "dense",
+        "selection_score": 0.7830547094345093
+      }
+    ],
+    "evidence_used": [
+      {
+        "rank": 1,
+        "source_type": "company_handbook",
+        "title": "Managing Work Devices",
+        "selection_method": "dense",
+        "evidence": "With Linux, we run Omarchy, which already comes with the standard configuration needed (full-disk encryption, firewall, etc). Here we lean on 1password to provide the employee onboarding/offboarding of access to credentials and our Tailscale VPN to control access to internal systems. We don't use a managed process like Kandji.\n\n## Access to code and secrets\nKnowing our devices are safe and secure allows us to entrust"
+      },
+      {
+        "rank": 2,
+        "source_type": "company_handbook",
+        "title": "Managing Work Devices",
+        "selection_method": "dense",
+        "evidence": "# Managing work devices\nEveryone receives a new Mac when they join 37signals. We centrally manage and secure these devices with Kandji which reduces our exposure to security incidents. Kandji applies a standard configuration to every device (e.g. enable disk encryption, firewall, password rules), it installs essential apps (e.g. EncryptMe), and it will ensure the apps have the latest security updates applied. Kandji "
+      },
+      {
+        "rank": 3,
+        "source_type": "company_handbook",
+        "title": "Managing Work Devices",
+        "selection_method": "dense",
+        "evidence": "## Mobile devices and Windows\nDevices running Android, iOS/iPadOS, and Windows are currently unmanaged. It’s fine to install our BC4 and HEY apps on these devices to access work projects and email, but since they’re unmanaged – and therefore ‘untrusted’ – it’s not okay to store 37signals code or secrets on them. If you're coding or accessing secure systems, you should be doing so on a Kandji-managed Mac or an Omarchy"
+      },
+      {
+        "rank": 4,
+        "source_type": "company_handbook",
+        "title": "Moonlighting",
+        "selection_method": "dense",
+        "evidence": "## Not OK\n1. You can’t work full time or part time for another company in our industry. If you’re unclear about what our industry is, and you have a specific situation you’d like to talk about, ping Jason or David.\n2. Go out on a regular speaking circuit tour which is going to require multiple days of travel multiple times a year. That’s too disruptive to our own work schedule and to your fellow teammates.\n3. Consult"
+      },
+      {
+        "rank": 5,
+        "source_type": "company_handbook",
+        "title": "Readme",
+        "selection_method": "dense",
+        "evidence": "Read on basecamp.com\n\n# 37signals Employee Handbook\nIn this handbook, you’ll find everything you need to know about 37signals policies and benefits. Hopefully it also offers a small peek at our culture.\n\nIf you’re new to the company, welcome! It’s important that you review everything in this handbook, so you know what’s expected of you and what you can expect from us. Please note that this handbook may be updated at "
+      }
+    ],
+    "prompt": "Bạn là trợ lý RAG nội bộ doanh nghiệp.\n\nROUTE:\ncompany_only\n\nDECISION:\nanswer\n\nLÝ DO DECISION:\nTìm thấy nguồn handbook nội bộ đủ liên quan để trả lời.\n\nNHIỆM VỤ:\nTrả lời trực tiếp dựa trên CONTEXT. Không suy đoán ngoài tài liệu.\n\nQUY TẮC BẮT BUỘC:\n- Chỉ dùng thông tin trong CONTEXT.\n- Không bịa thêm điều khoản, luật, chính sách hoặc con số không có trong CONTEXT.\n- Nếu nguồn pháp luật chưa đủ chắc, phải nói rõ cần HR/pháp chế kiểm tra thêm.\n- Câu trả lời phải dễ hiểu, có cấu trúc và có nguồn.\n- Nếu câu hỏi bằng tiếng Việt, trả lời bằng tiếng Việt.\n- Nếu câu hỏi bằng tiếng Anh, trả lời bằng tiếng Anh.\n\nQUESTION:\nWhat is the company policy for managing work devices?\n\nCONTEXT:\n[Source 1]\nsource_type: company_handbook\ntitle: Managing Work Devices\nparent_id: company_0004\nchunk_id: company_0004_001\nselection_method: dense\nselection_score: 0.825828\nbm25_rank: nan\ndense_rank: 1\nrerank_score: None\n\nWith Linux, we run Omarchy, which already comes with the standard configuration needed (full-disk encryption, firewall, etc). Here we lean on 1password to provide the employee onboarding/offboarding of access to credentials and our Tailscale VPN to control access to internal systems. We don't use a managed process like Kandji.\n\n## Access to code and secrets\nKnowing our devices are safe and secure allows us to entrust our work computers with access to sensitive systems like Queenbee, and our internal VPN and remote servers. This means installing the VPN, checking out 37signals code, and storing secrets must only be done on a work device, not a personal device.\n\nPlease do not keep any personal data on your 37signals-issued computer. You should maintain a separate, personally-owned machine if you need a home computer. The company reserves the right to, and may be required to, seize your computer or its data at any point in response to subpoenas, lawsuits, or security incidents.\n\n---\n\n[Source 2]\nsource_type: company_handbook\ntitle: Managing Work Devices\nparent_id: company_0004\nchunk_id: company_0004_000\nselection_method: dense\nselection_score: 0.825389\nbm25_rank: nan\ndense_rank: 2\nrerank_score: None\n\n# Managing work devices\nEveryone receives a new Mac when they join 37signals. We centrally manage and secure these devices with Kandji which reduces our exposure to security incidents. Kandji applies a standard configuration to every device (e.g. enable disk encryption, firewall, password rules), it installs essential apps (e.g. EncryptMe), and it will ensure the apps have the latest security updates applied. Kandji also allows us to remotely wipe devices should they be lost, or when an employee leaves the company.\n\nWe mainly use macOS and Linux at 37signals to develop and support our applications.\n\nWith macOS, we centrally manage and secure these devices with Kandji. Kandji applies a standard configuration to every device (e.g. enable disk encryption, firewall, password rules), it installs essential apps, and it will ensure the apps have the latest security updates applied. Kandji also allows us to remotely wipe devices should they be lost, or when an employee leaves the company. (This doesn’t mean you are being monitored or tracked! Kandji is a configuration management system, not a panopticon.)\n\n---\n\n[Source 3]\nsource_type: company_handbook\ntitle: Managing Work Devices\nparent_id: company_0004\nchunk_id: company_0004_002\nselection_method: dense\nselection_score: 0.819602\nbm25_rank: nan\ndense_rank: 3\nrerank_score: None\n\n## Mobile devices and Windows\nDevices running Android, iOS/iPadOS, and Windows are currently unmanaged. It’s fine to install our BC4 and HEY apps on these devices to access work projects and email, but since they’re unmanaged – and therefore ‘untrusted’ – it’s not okay to store 37signals code or secrets on them. If you're coding or accessing secure systems, you should be doing so on a Kandji-managed Mac or an Omarchy Linux machine.\n\n## FAQ\nThere are many questions that arise from IT policies such as this, so we've written an FAQ in BC4 to help answer them.\n\n---\n\n[Source 4]\nsource_type: company_handbook\ntitle: Moonlighting\nparent_id: company_0005\nchunk_id: company_0005_002\nselection_method: dense\nselection_score: 0.788421\nbm25_rank: nan\ndense_rank: 4\nrerank_score: None\n\n## Not OK\n1. You can’t work full time or part time for another company in our industry. If you’re unclear about what our industry is, and you have a specific situation you’d like to talk about, ping Jason or David.\n2. Go out on a regular speaking circuit tour which is going to require multiple days of travel multiple times a year. That’s too disruptive to our own work schedule and to your fellow teammates.\n3. Consult for other companies in our industry where there may be a conflict of interest (a competitor, a product tangentially related to 37signals, etc).\n4. Be aggressive in marketing your availability for side work. If something comes to you through a friend or some connection, fine, but aggressively promoting something on the side will ultimately result in a conflict of interest here at work.\n5. Take on anything outside of work that’ll pull attention from work. For example, if you wanted to launch an app, but the app requires providing timely customer support to people who use the app, that’s going to eat into your day here at work. That would ultimately be a problem.\n\n## In general\nHere are a few guiding principles about whether something could be a problem:\n\n---\n\n[Source 5]\nsource_type: company_handbook\ntitle: Readme\nparent_id: company_0008\nchunk_id: company_0008_000\nselection_method: dense\nselection_score: 0.783055\nbm25_rank: nan\ndense_rank: 5\nrerank_score: None\n\nRead on basecamp.com\n\n# 37signals Employee Handbook\nIn this handbook, you’ll find everything you need to know about 37signals policies and benefits. Hopefully it also offers a small peek at our culture.\n\nIf you’re new to the company, welcome! It’s important that you review everything in this handbook, so you know what’s expected of you and what you can expect from us. Please note that this handbook may be updated at any time, and it’s up to you to keep abreast of those updates – though we’ll do our best to notify all staff of major changes. GitHub repo is a great way to follow along with changes.\n\nPlease reach out to the People Ops team or to your manager if you have any questions about the information contained in this handbook.\n\n## Sections\n* Getting Started\n* Benefits & Perks\n* How We Work\n* Making a Career\n* Our Rituals\n* Managing Work Devices\n* Our Internal Systems\n* A Note About Moonlighting\n* State Leave Provisions\n* Severance Packages\n* Titles for Designers\n* Titles for Ops\n* Titles for Programmers\n* Titles for QA\n* Titles for Support\n\nYÊU CẦU OUTPUT:\n1. Câu trả lời\n2. Nguồn đã dùng\n3. Evidence ngắn gọn\n4. Mức độ tin cậy / lưu ý"
+  },
+  {
+    "question": "Lương thử việc được quy định như thế nào?",
+    "route": "legal_only",
+    "decision": "answer",
+    "should_call_llm": true,
+    "generation_method": "template_baseline",
+    "answer": "Theo nguồn pháp luật được truy xuất, tiền lương trong thời gian thử việc do hai bên thỏa thuận, nhưng ít nhất phải bằng 85% mức lương của công việc đó. Các nguồn liên quan cũng nhắc đến quy định về thử việc, thời gian thử việc và hành vi vi phạm quy định về thử việc.",
+    "sources_used": [
+      {
+        "rank": 1,
+        "source_type": "legal",
+        "title": "legal_cid_116782",
+        "parent_id": "116782",
+        "chunk_id": "legal_116782_000",
+        "selection_method": "reranker",
+        "selection_score": 1.562080979347229
+      },
+      {
+        "rank": 2,
+        "source_type": "legal",
+        "title": "legal_cid_61953",
+        "parent_id": "61953",
+        "chunk_id": "legal_61953_000",
+        "selection_method": "reranker",
+        "selection_score": -0.08648200333118439
+      },
+      {
+        "rank": 3,
+        "source_type": "legal",
+        "title": "legal_cid_107047",
+        "parent_id": "107047",
+        "chunk_id": "legal_107047_001",
+        "selection_method": "reranker",
+        "selection_score": -1.0605601072311401
+      },
+      {
+        "rank": 4,
+        "source_type": "legal",
+        "title": "legal_cid_175106",
+        "parent_id": "175106",
+        "chunk_id": "legal_175106_000",
+        "selection_method": "reranker",
+        "selection_score": -1.4236491918563843
+      },
+      {
+        "rank": 5,
+        "source_type": "legal",
+        "title": "legal_cid_77700",
+        "parent_id": "77700",
+        "chunk_id": "legal_77700_000",
+        "selection_method": "reranker",
+        "selection_score": -1.6048169136047363
+      }
+    ],
+    "evidence_used": [
+      {
+        "rank": 1,
+        "source_type": "legal",
+        "title": "legal_cid_116782",
+        "selection_method": "reranker",
+        "evidence": "Vi phạm quy định về thử việc\n1. Phạt tiền từ 500.000 đồng đến 1.000.000 đồng đối với người sử dụng lao động có một trong các hành vi sau đây:\na) Yêu cầu thử việc đối với người lao động làm việc theo hợp đồng lao động có thời hạn dưới 01 tháng;\n..."
+      },
+      {
+        "rank": 2,
+        "source_type": "legal",
+        "title": "legal_cid_61953",
+        "selection_method": "reranker",
+        "evidence": "“Điều 26. Tiền lương trong thời gian thử việc\n Tiền lương của người lao động trong thời gian thử việc do hai bên thoả thuận nhưng ít nhất phải bằng 85% mức lương của công việc đó.”"
+      },
+      {
+        "rank": 3,
+        "source_type": "legal",
+        "title": "legal_cid_107047",
+        "selection_method": "reranker",
+        "evidence": "thử nghiệm theo từng đề thi: 1.000.000 đồng/báo cáo/môn thi.\ne) Tiền công thuê chuyên gia định cỡ câu trắc nghiệm (Chủ trì; các thành viên): Áp dụng cách thức tính toán tiền công theo ngày cho từng cá nhân nhưng không phân biệt trình độ đào tạo và thâm niên công tác theo mức lương quy định tại Điều 3, Điều 4 Thông tư số 02/2015/TT-BLĐTBXH.\""
+      },
+      {
+        "rank": 4,
+        "source_type": "legal",
+        "title": "legal_cid_175106",
+        "selection_method": "reranker",
+        "evidence": "Thử việc và thời gian thử việc\n1. Thử việc\na) Đơn vị sử dụng lao động và người lao động có thể thỏa thuận nội dung thử việc ghi trong hợp đồng lao động hoặc thỏa thuận về thử việc bằng việc giao kết hợp đồng thử việc;\nb) Không áp dụng thử việc đối với người lao động giao kết hợp đồng lao động có thời hạn dưới 01 tháng.\n2. Thời gian thử việc\nThời gian thử việc do hai bên thỏa thuận căn cứ vào tính chất và mức độ phức "
+      },
+      {
+        "rank": 5,
+        "source_type": "legal",
+        "title": "legal_cid_77700",
+        "selection_method": "reranker",
+        "evidence": "\"Điều 17. Vi phạm quy định về tiền lương\n1. Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng đối với người sử dụng lao động có một trong các hành vi sau đây:\na) Không công bố công khai tại nơi làm việc trước khi thực hiện: thang lương, bảng lương; mức lao động; quy chế thưởng;\nb) Không xây dựng thang lương, bảng lương hoặc định mức lao động; không áp dụng thử mức lao động trước khi ban hành chính thức;\nc) Không tham k"
+      }
+    ],
+    "prompt": "Bạn là trợ lý RAG nội bộ doanh nghiệp.\n\nROUTE:\nlegal_only\n\nDECISION:\nanswer\n\nLÝ DO DECISION:\nCó nguồn pháp luật đủ liên quan để trả lời.\n\nNHIỆM VỤ:\nTrả lời trực tiếp dựa trên CONTEXT. Không suy đoán ngoài tài liệu.\n\nQUY TẮC BẮT BUỘC:\n- Chỉ dùng thông tin trong CONTEXT.\n- Không bịa thêm điều khoản, luật, chính sách hoặc con số không có trong CONTEXT.\n- Nếu nguồn pháp luật chưa đủ chắc, phải nói rõ cần HR/pháp chế kiểm tra thêm.\n- Câu trả lời phải dễ hiểu, có cấu trúc và có nguồn.\n- Nếu câu hỏi bằng tiếng Việt, trả lời bằng tiếng Việt.\n- Nếu câu hỏi bằng tiếng Anh, trả lời bằng tiếng Anh.\n\nQUESTION:\nLương thử việc được quy định như thế nào?\n\nCONTEXT:\n[Source 1]\nsource_type: legal\ntitle: legal_cid_116782\nparent_id: 116782\nchunk_id: legal_116782_000\nselection_method: reranker\nselection_score: 1.562081\nbm25_rank: nan\ndense_rank: 1.0\nrerank_score: 1.562081\n\nVi phạm quy định về thử việc\n1. Phạt tiền từ 500.000 đồng đến 1.000.000 đồng đối với người sử dụng lao động có một trong các hành vi sau đây:\na) Yêu cầu thử việc đối với người lao động làm việc theo hợp đồng lao động có thời hạn dưới 01 tháng;\n...\n\n---\n\n[Source 2]\nsource_type: legal\ntitle: legal_cid_61953\nparent_id: 61953\nchunk_id: legal_61953_000\nselection_method: reranker\nselection_score: -0.086482\nbm25_rank: nan\ndense_rank: 2.0\nrerank_score: -0.086482\n\n“Điều 26. Tiền lương trong thời gian thử việc\n Tiền lương của người lao động trong thời gian thử việc do hai bên thoả thuận nhưng ít nhất phải bằng 85% mức lương của công việc đó.”\n\n---\n\n[Source 3]\nsource_type: legal\ntitle: legal_cid_107047\nparent_id: 107047\nchunk_id: legal_107047_001\nselection_method: reranker\nselection_score: -1.060560\nbm25_rank: nan\ndense_rank: 9.0\nrerank_score: -1.060560\n\nthử nghiệm theo từng đề thi: 1.000.000 đồng/báo cáo/môn thi.\ne) Tiền công thuê chuyên gia định cỡ câu trắc nghiệm (Chủ trì; các thành viên): Áp dụng cách thức tính toán tiền công theo ngày cho từng cá nhân nhưng không phân biệt trình độ đào tạo và thâm niên công tác theo mức lương quy định tại Điều 3, Điều 4 Thông tư số 02/2015/TT-BLĐTBXH.\"\n\n---\n\n[Source 4]\nsource_type: legal\ntitle: legal_cid_175106\nparent_id: 175106\nchunk_id: legal_175106_000\nselection_method: reranker\nselection_score: -1.423649\nbm25_rank: nan\ndense_rank: 4.0\nrerank_score: -1.423649\n\nThử việc và thời gian thử việc\n1. Thử việc\na) Đơn vị sử dụng lao động và người lao động có thể thỏa thuận nội dung thử việc ghi trong hợp đồng lao động hoặc thỏa thuận về thử việc bằng việc giao kết hợp đồng thử việc;\nb) Không áp dụng thử việc đối với người lao động giao kết hợp đồng lao động có thời hạn dưới 01 tháng.\n2. Thời gian thử việc\nThời gian thử việc do hai bên thỏa thuận căn cứ vào tính chất và mức độ phức tạp của công việc nhưng chỉ được thử việc 01 lần đối với một công việc và bảo đảm các điều kiện sau đây:\na) Không quá 60 ngày đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên;\nb) Không quá 30 ngày đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật trung cấp nghề, trung cấp chuyên nghiệp và tương đương;\nc) Không quá 06 ngày làm việc đối với công việc khác.\n3. Tiền lương của người lao động trong thời gian thử việc do hai bên thỏa thuận nhưng ít nhất phải bằng 85% mức lương của công việc đó.\n\n---\n\n[Source 5]\nsource_type: legal\ntitle: legal_cid_77700\nparent_id: 77700\nchunk_id: legal_77700_000\nselection_method: reranker\nselection_score: -1.604817\nbm25_rank: nan\ndense_rank: 29.0\nrerank_score: -1.604817\n\n\"Điều 17. Vi phạm quy định về tiền lương\n1. Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng đối với người sử dụng lao động có một trong các hành vi sau đây:\na) Không công bố công khai tại nơi làm việc trước khi thực hiện: thang lương, bảng lương; mức lao động; quy chế thưởng;\nb) Không xây dựng thang lương, bảng lương hoặc định mức lao động; không áp dụng thử mức lao động trước khi ban hành chính thức;\nc) Không tham khảo ý kiến của tổ chức đại diện người lao động tại cơ sở đối với nơi có tổ chức đại diện người lao động tại cơ sở khi xây dựng thang lương, bảng lương; định mức lao động; quy chế thưởng;\nd) Không thông báo bảng kê trả lương hoặc có thông báo bảng kê trả lương cho người lao động nhưng không đúng theo quy định;\nđ) Không trả lương bình đẳng hoặc phân biệt giới tính đối với người lao động làm công việc có giá trị như nhau.\"\n\nYÊU CẦU OUTPUT:\n1. Câu trả lời\n2. Nguồn đã dùng\n3. Evidence ngắn gọn\n4. Mức độ tin cậy / lưu ý"
+  },
+  {
+    "question": "Cách nấu phở bò ngon tại nhà như thế nào?",
+    "route": "out_of_scope",
+    "decision": "refuse",
+    "should_call_llm": false,
+    "generation_method": "template_baseline",
+    "answer": "Tôi chưa tìm thấy đủ thông tin phù hợp trong phạm vi tài liệu doanh nghiệp/pháp luật của hệ thống. Vì vậy tôi không nên trả lời để tránh suy đoán sai.",
+    "sources_used": [],
+    "evidence_used": [],
+    "prompt": null
+  },
+  {
+    "question": "Chính sách này áp dụng sao?",
+    "route": "need_clarification",
+    "decision": "ask_clarification",
+    "should_call_llm": false,
+    "generation_method": "template_baseline",
+    "answer": "Bạn vui lòng nói rõ hơn chính sách hoặc vấn đề cụ thể cần hỏi. Ví dụ: chính sách thiết bị làm việc, lương thử việc, bảo hiểm, hợp đồng lao động, hoặc quy định áp dụng cho nhân viên Việt Nam.",
+    "sources_used": [],
+    "evidence_used": [],
+    "prompt": null
+  }
+]

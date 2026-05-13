@@ -1,0 +1,13 @@
+{
+  "notebook": "11_evaluation_report.ipynb",
+  "main_goal": "Summarize all RAG pipeline experiments into final evaluation report.",
+  "best_retrieval_method": "Reranker",
+  "selected_metric": "recall@5",
+  "reranker_recall@5": 0.784195,
+  "weighted_hybrid_recall@5": 0.708077,
+  "generation_quality_pass": 5,
+  "generation_quality_total": 5,
+  "report_files_ok": 8,
+  "report_files_total": 8,
+  "final_report_path": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\reports\\final_evaluation_report.md"
+}

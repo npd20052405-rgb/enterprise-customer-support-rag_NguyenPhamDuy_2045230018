@@ -1,0 +1,31 @@
+{
+  "notebook": "13_llm_generation_rag.ipynb",
+  "main_goal": "Add real LLM generation into the Corrective RAG pipeline.",
+  "llm_provider": "Gemini API",
+  "llm_model": "gemini-2.5-flash",
+  "pipeline": [
+    "Question",
+    "Retrieval",
+    "Reranker",
+    "Corrective Gate",
+    "Gemini LLM Generation",
+    "Answer + Sources + Evidence"
+  ],
+  "num_cases": 5,
+  "num_should_call_llm": 3,
+  "num_direct_response": 2,
+  "quality_pass": 5,
+  "quality_total": 5,
+  "provider_distribution": {
+    "gemini_api_v2_regenerated": 2,
+    "direct_response": 2,
+    "gemini_api": 1
+  },
+  "important_outputs": {
+    "gemini_generation_outputs": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\llm_generation\\gemini_generation_outputs.json",
+    "gemini_generation_outputs_regenerated_v2": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\llm_generation\\gemini_generation_outputs_regenerated_v2.json",
+    "final_llm_generation_outputs": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\llm_generation\\final_llm_generation_outputs.json",
+    "final_llm_generation_quality_report": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\llm_generation\\final_llm_generation_quality_report.csv"
+  },
+  "main_conclusion": "The project now has end-to-end RAG with real LLM generation using Gemini API. Corrective RAG controls when to call the LLM, and all final demo cases pass quality checks."
+}

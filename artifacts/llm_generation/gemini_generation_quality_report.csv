@@ -1,0 +1,6 @@
+﻿question,route,decision,provider_used,model,answer_chars,overall_status,failed_checks,has_answer,answer_not_too_short,mentions_legal_review,mentions_internal_policy,mentions_device_policy,mentions_85_percent,direct_response_ok,refuses_answer,asks_clarification
+Nếu công ty áp dụng chính sách quản lý thiết bị làm việc cho nhân viên Việt Nam thì cần lưu ý gì?,cross_policy,answer_with_legal_review_notice,gemini_api,gemini-2.5-flash,139,FAIL,"['answer_not_too_short', 'mentions_legal_review']",True,False,False,True,,,,,
+What is the company policy for managing work devices?,company_only,answer,gemini_api,gemini-2.5-flash,111,FAIL,['answer_not_too_short'],True,False,,,True,,,,
+Lương thử việc được quy định như thế nào?,legal_only,answer,gemini_api,gemini-2.5-flash,823,PASS,[],True,True,,,,True,,,
+Cách nấu phở bò ngon tại nhà như thế nào?,out_of_scope,refuse,direct_response,corrective_rule,150,PASS,[],True,,,,,,True,True,
+Chính sách này áp dụng sao?,need_clarification,ask_clarification,direct_response,corrective_rule,190,PASS,[],True,,,,,,True,,True

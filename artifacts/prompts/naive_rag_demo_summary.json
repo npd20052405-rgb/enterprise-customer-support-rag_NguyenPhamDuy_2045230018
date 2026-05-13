@@ -1,0 +1,36 @@
+{
+  "notebook": "06_naive_rag.ipynb",
+  "retrieval_method": "Dense Retrieval with multilingual-e5-base",
+  "main_outputs": {
+    "company_prompt": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\prompts\\latest_naive_rag_prompt.txt",
+    "legal_prompt": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\prompts\\latest_naive_rag_prompt_vi_legal.txt",
+    "cross_policy_prompt": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\prompts\\latest_naive_rag_prompt_cross_policy_fixed.txt",
+    "cross_policy_preview": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\prompts\\cross_policy_preview_output.json"
+  },
+  "demo_cases": [
+    {
+      "case": "company_handbook_question",
+      "question": "What is the company policy for managing work devices?",
+      "source_filter": "company_handbook",
+      "is_confident": true,
+      "max_score": 0.8258280754089355
+    },
+    {
+      "case": "unrelated_question",
+      "question": "Cách nấu phở bò ngon tại nhà như thế nào?",
+      "source_filter": "company_handbook",
+      "is_confident": false,
+      "max_score": 0.7532504200935364
+    },
+    {
+      "case": "cross_policy_question",
+      "question": "Nếu công ty áp dụng chính sách quản lý thiết bị làm việc cho nhân viên Việt Nam thì cần lưu ý gì?",
+      "source_filter": "company_handbook + legal",
+      "num_sources": 6,
+      "source_distribution": {
+        "company_handbook": 3,
+        "legal": 3
+      }
+    }
+  ]
+}

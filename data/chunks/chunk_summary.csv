@@ -1,0 +1,3 @@
+﻿source_type,num_chunks,num_parent_docs,avg_chunk_chars,min_chunk_chars,max_chunk_chars,languages
+company_handbook,95,16,1038.95,128,1199,English
+legal,91353,68663,746.39,4,1200,Vietnamese

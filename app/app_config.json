@@ -1,0 +1,9 @@
+{
+  "project": "Enterprise Customer Support RAG",
+  "app": "Streamlit Artifact Demo",
+  "updated_for": "Gemini LLM Generation",
+  "test_questions": "30 advanced test questions with Vietnamese translations for English questions",
+  "preferred_output": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\llm_generation\\final_llm_generation_outputs.json",
+  "fallback_output": "C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\\artifacts\\generation\\final_generation_outputs.json",
+  "run_command": "cd /d \"C:\\Users\\npd20\\Downloads\\Enterprise_Customer_Support_RAG\\enterprise_customer_support_rag\" && streamlit run app\\streamlit_app.py"
+}
